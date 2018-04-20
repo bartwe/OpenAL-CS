@@ -538,10 +538,10 @@ namespace OpenAL
 		);
 
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern void alBufferiv(
+		public static extern unsafe void alBufferiv(
 			uint buffer,
 			int param,
-			int[] values
+			int* values
 		);
 
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
